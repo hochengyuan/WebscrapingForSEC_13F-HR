@@ -59,6 +59,30 @@ This Python Application
 		<td>void</td>
 		<td>Propel the web scraping for each input CIK/Ticker.</td>
 	</tr>
+	<tr>
+		<td>__run_collecturl(cik)</td>
+		<td>string</td>
+		<td>cik (string)</td>
+		<td>call collecturl.py</td>
+	</tr>
+	<tr>
+		<td>__run_collectxml(url)</td>
+		<td>string</td>
+		<td>xml_url (string)</td>
+		<td>call collectxml.py</td>
+	</tr>
+	<tr>
+		<td>__run_parsexml(xml_url)</td>
+		<td>string</td>
+		<td>Pandas DataFrame</td>
+		<td>call parsexml.py</td>
+	</tr>
+	<tr>
+		<td>__write_df_to_tsv(dataframe , cik)</td>
+		<td>void</td>
+		<td>Parsed XML (Pandas DataFrame) , CIK(string)</td>
+		<td>convert Pandas DataFrame to ".tsv file" in directory "../output/"</td>
+	</tr>
 </table>
 
 <br><b>2. collecturl.py</b>
@@ -124,18 +148,6 @@ This Python Application
 		<td>Go through all process for collecting the url of xml file for the lastest 13F-HR.</td>
 	</tr>
 	<tr>
-		<td>__bridge_url()</td>
-		<td>string</td>
-		<td>void</td>
-		<td>Bridge the parsed result (url) of Search Result Page through "collecturl.py".</td>
-	</tr>
-	<tr>
-		<td>__collect_xml_url(url)</td>
-		<td>string</td>
-		<td>url (string)</td>
-		<td>Connect the url of Documentation Page and retreive the xml url of 13F-HR.</td>
-	</tr>
-	<tr>
 		<td>__select_xml_url(src_html)</td>
 		<td>string</td>
 		<td>html (string)</td>
@@ -171,12 +183,6 @@ This Python Application
 		<td>Go through the whole process, including parsing input xml and save parsed result to .tsv file</td>
 	</tr>
 	<tr>
-		<td>__bridge_xml_url()</td>
-		<td>void</td>
-		<td>url (string)</td>
-		<td>Bridge the parsed result (url of xml) of Documentation Page through "collectxml.py"</td>
-	</tr>
-	<tr>
 		<td>__implement_GET_Request(url)</td>
 		<td>string / None (when failed)</td>
 		<td>url (string)</td>
@@ -189,16 +195,10 @@ This Python Application
 		<td>Parsed the input xml text to Pandas Dataframe.</td>
 	</tr>
 	<tr>
-		<td>__write_df_to_tsv()</td>
+		<td>get_parsed_xml_df()</td>
 		<td>void</td>
-		<td>void</td>
-		<td>Save the parsed dataframe to .tsv file under "./output" directory.</td>
-	</tr>
-	<tr>
-		<td>print_df()</td>
-		<td>void</td>
-		<td>void</td>
-		<td>Print out parsed xml in Pandas DataFrame type. This function is for supporting and debugging.</td>
+		<td>Pandas DataFrame</td>
+		<td>Retrieve parsed xml in Pandas DataFrame type.</td>
 	</tr>
 </table>
 

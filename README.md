@@ -21,10 +21,26 @@ This Python Application
 # III. Documentation
 ## i. API Profile
 <table border='1'>
-	<tr><th>.py file</th><th>Description</th></tr>
+	<tr><th>API Name</th><th>Description</th></tr>
 	<tr>
 		<td>main.py</td>
 		<td>The main program to run the web scraping application.</td>
+	</tr>
+	<tr>
+		<td>manager.py</td>
+		<td>Parse the input CIK/Ticker, and propel the web scraping for each CIK/Ticker</td>
+	</tr>
+	<tr>
+		<td>collecturl.py</td>
+		<td>Go to the search result page of CIK/Ticker 13F-HR report on SEC Search EDGAR. Then, retrieve the url of the latest document page</td>
+	</tr>
+	<tr>
+		<td>collectxml.py</td>
+		<td>Go to the lastest document page of CIK/Ticker 13F-HR report. Then, retrieve the url of the xml file(information table of 13F-HR)</td>
+	</tr>
+	<tr>
+		<td>parsexml.py</td>
+		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file</td>
 	</tr>
 </table>>
 ## ii.

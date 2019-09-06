@@ -50,7 +50,7 @@ This Python Application
 ## iii. Function Description for each API
 <b>1. manager.py</b>
 <table border='1'>
-	<tr><th>Function Name</th><th>Return</th><th>Description</th></tr>
+	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
 	<tr>
 		<td>execute()</td>
 		<td>void</td>
@@ -60,7 +60,7 @@ This Python Application
 
 <b>2. collecturl.py</b>
 <table border='1'>
-	<tr><th>Function Name</th><th>Return</th><th>Description</th></tr>
+	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
 	<tr>
 		<td>run()</td>
 		<td>void</td>
@@ -100,5 +100,25 @@ This Python Application
 		<td>get_html()</td>
 		<td>string</td>
 		<td>Get the source html of the Search Result Page</td>
+	</tr>
+</table>
+
+<b>3. collectxml.py</b>
+<table border="1">
+	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
+	<tr>
+		<td>run()</td>
+		<td>void</td>
+		<td>Go through all process for collecting the url of xml file for the lastest 13F-HR.</td>
+	</tr>
+	<tr>
+		<td>__bridge_url()</td>
+		<td>string</td>
+		<td>Bridge the parsed result (url) of Document Page from "collecturl.py".</td>
+	</tr>
+	<tr>
+		<td>__collect_xml_url()</td>
+		<td>string</td>
+		<td>Retreive the xml url of 13F-HR through parsing documentation page.</td>
 	</tr>
 </table>

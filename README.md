@@ -203,7 +203,7 @@ This Python Application
 
 ## iv. Corner Cases
 <br><b>1. Handle Exception and Errors</b>
-<br> Print out message like the following and terminate the application.
+<br>&nbsp;&nbsp; - Print out message like the following and terminate the application.
 <br>(1) Wrong CIK/Ticker (Example: input "bill gate")
 ```
 No matching CIK/Ticker: bill gate
@@ -241,3 +241,6 @@ the xml url does not work. url: [failed url]
 Application Terminated
 ```
 <br><b>2. Limitations</b>
+<br> (1) If the documentation page does not label its table well, the application will throw error on parsexml.py
+<br> (2) If the xml change the format or 13F-HR change the format, the application will throw error on parsexml.py
+<br> (3) If the internet disconnects, the application will be terminated.

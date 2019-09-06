@@ -42,5 +42,18 @@ This Python Application
 		<td>parsexml.py</td>
 		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file</td>
 	</tr>
-</table>>
-## ii.
+</table>
+
+## ii. API Flow
+
+
+## iii. Function Description for each API
+<b> 1. manager.py
+<table border='1'>
+	<tr><th>Function Name</th><th>Return</th><th>Description</th></tr>
+	<tr>
+		<td>execute()</td>
+		<td>void</td>
+		<td>Propel the web scraping for each input CIK/Ticker</td>
+	</tr>
+</table>

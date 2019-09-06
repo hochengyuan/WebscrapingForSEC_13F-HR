@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 import sys
 
 class CollectURL:
-	def __init__(self , input_string):
+	def __init__(self , input_cik_ticker):
 		# Initialization
-		self.__input_string = input_string
+		self.__input_string = input_cik_ticker
 		self.__url = None
 		self.__response = None
 		self.__src_html = None 
@@ -18,7 +18,6 @@ class CollectURL:
 		self.__connect()
 		self.__checkPageFound()
 		self.__collect_report_link()
-		print("Collected the current 13F-HR report page of %s" % self.__input_string)
 
 
 

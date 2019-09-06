@@ -18,4 +18,4 @@ if __name__ == '__main__':
 	manager = Manager(line)
 	manager.execute()
 	print()
-	print("FINISH ALL WEB SCRAPING")
+	print("FINISH ALL WEB SCRAPING\n")

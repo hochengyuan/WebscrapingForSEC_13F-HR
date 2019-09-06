@@ -4,9 +4,9 @@ from collecturl import CollectURL
 import sys
 
 class CollectXML:
-	def __init__(self , input_string):
+	def __init__(self , input_url):
 		# Initialization
-		self.__cik = input_string
+		self.__url = input_url
 		self.__xml_url = None
 
 		# Processing
@@ -14,13 +14,7 @@ class CollectXML:
 
 
 	def run(self):
-		url = self.__bridge_url()
-		self.__collect_xml_url(url)
-		print("Collected the XML url of the current 13F-HR for %s" % self.__cik)
-
-
-	def __collect_xml_url(self , url):
-		src_html = self.__implement_GET_Request(url)
+		src_html = self.__implement_GET_Request(self.__url)
 		xml_url = self.__select_xml_url(src_html)
 		self.__xml_url = xml_url
 
@@ -53,10 +47,6 @@ class CollectXML:
 	def get_fail_landing_url(self):
 		return self.__fail_landing_url
 
-	def __bridge_url(self):
-		collect_url = CollectURL(self.__cik)
-		collect_url.run()
-		return collect_url.get_report_url()
 
 	def __implement_GET_Request(self , url):
 		try_time = 1
@@ -70,7 +60,7 @@ class CollectXML:
 		if try_time == 3:
 			self.__fail_landing_url = url
 			print("Could not implement GET Request on xml: %s ; Status Code: %s" % \
-				(self.__fail_xml_url , response.status_code))
+				(self.get_fail_landing_url() , response.status_code))
 			print("Application Terminated")
 			sys.exit(1)
 

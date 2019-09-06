@@ -17,8 +17,7 @@ This Python Application
 <br> 4. Follow the instruction on the terminal screen
 <image src="./screenshot/command_line.png">
 <br> 5. Output Directory: "./output/"
-<br>&nbsp;&nbsp; - Sample of the output for CIK: 0001166559
-<image src="./screenshot/output_sample.png">
+<br>&nbsp;&nbsp; - Example of the output for <a href="./output/0001166559.tsv" target="_blank">CIK: 0001166559</a>
 
 # III. Documentation
 ## i. API Profile

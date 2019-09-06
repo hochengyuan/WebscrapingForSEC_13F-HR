@@ -202,5 +202,13 @@ This Python Application
 </table>
 
 ## iv. Corner Cases
-<br><b>1. Exception and Errors</b>
+<br><b>1. Handle Exception and Errors</b>
+<br>(1) Wrong CIK/Ticker: 
+<br>(2) CIK/Ticker does not have 13F-HR Form: Print out message: 
+```
+ticker/CIK [input_cik] does not have 13F-HR 
+Application Failed
+```
+Then, terminate the application.
+<br>(3) 
 <br><b>2. Limitations</b>

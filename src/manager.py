@@ -7,8 +7,10 @@ class Manager:
 
 	def execute(self):
 		# Make Directory
-		if not os.path.exists("output"):
-			os.makedirs("output")
+		parent_dir = os.path.abspath("..")
+		output_dir = parent_dir + "/output/"
+		if not os.path.exists(output_dir):
+			os.makedirs(output_dir)
 
 		for cik in self.cik_container:
 			parsexml = ParseXML(cik)

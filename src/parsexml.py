@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 import csv
+import os
 
 class ParseXML:
 	def __init__(self , input_string):
@@ -13,6 +14,7 @@ class ParseXML:
 		self.columns = ["nameOfIssuer" , "titleOfClass" , "cusip" , "value" , "sshPrnamt" , "sshPrnamtType" , "putCall" , \
            "investmentDiscretion" , "otherManager" , "Sole" , "Shared" , "None"]
 		self.df = pd.DataFrame(columns=self.columns)
+		self.__parent_dir = os.path.abspath("..")
 
 
 	def run(self):
@@ -20,7 +22,8 @@ class ParseXML:
 		src_xml = self.__implement_GET_Request(url)
 		self.__parse_single_xml_to_df(src_xml)
 		self.__write_df_to_tsv()
-		print("Written the parsed XML file to path of \"./output/%s.tsv\"" % self.__cik)
+		parent_dir = os.path.abspath("..")
+		print("Written the parsed XML file to path of \"../output/%s.tsv\"" % (self.__cik))
 
 
 	def __parse_single_xml_to_df(self , src_xml):
@@ -46,7 +49,7 @@ class ParseXML:
 		return self.df
 
 	def __write_df_to_tsv(self):
-		path = "./output/" + self.__cik + ".tsv"
+		path = "%s/output/%s.tsv" % (self.__parent_dir , self.__cik)
 		header = ["COLUMN 1: Name of Issuer" , "COLUMN 2: Title of Class" , "COLUMN 3: CUSIP Number" , "COLUMN 4: Market Value" ,\
 		          "COLUMN 5: Amount and Type of Security" , " " , " " , \
 		          "COLUMN 6: Investment Discretion" , "COLUMN 7: Other Managers" , "COLUMN 8: Voting Authority" , " " , " "]

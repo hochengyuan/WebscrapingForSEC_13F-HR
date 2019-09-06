@@ -48,12 +48,27 @@ This Python Application
 
 
 ## iii. Function Description for each API
-<b> 1. manager.py
+<b>1. manager.py</b>
 <table border='1'>
 	<tr><th>Function Name</th><th>Return</th><th>Description</th></tr>
 	<tr>
 		<td>execute()</td>
 		<td>void</td>
 		<td>Propel the web scraping for each input CIK/Ticker</td>
+	</tr>
+</table>
+
+<b>2. collecturl.py</b>
+<table border='1'>
+	<tr><th>Function Name</th><th>Return</th><th>Description</th></tr>
+	<tr>
+		<td>run()</td>
+		<td>void</td>
+		<td>Go through all process for collecting the url of the document page.</td>
+	</tr>
+	<tr>
+		<td>__connect()</td>
+		<td>void</td>
+		<td>If the status code for the HTTP GET Request is 200, retrieve source html text. Otherwise, terminate the application</td>
 	</tr>
 </table>

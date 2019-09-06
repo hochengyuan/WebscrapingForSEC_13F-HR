@@ -46,7 +46,7 @@ This Python Application
 </table>
 
 ## ii. API Flow
-
+<image src="application_flow.png">
 
 ## iii. Function Description for each API
 <br><b>1. manager.py</b>

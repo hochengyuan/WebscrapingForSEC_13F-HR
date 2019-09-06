@@ -28,19 +28,19 @@ This Python Application
 	</tr>
 	<tr>
 		<td>manager.py</td>
-		<td>Parse the input CIK/Ticker, and propel the web scraping for each CIK/Ticker</td>
+		<td>Parse the input CIK/Ticker, and propel the web scraping for each CIK/Ticker.</td>
 	</tr>
 	<tr>
 		<td>collecturl.py</td>
-		<td>Go to the search result page of CIK/Ticker 13F-HR report on SEC Search EDGAR. Then, retrieve the url of the latest document page</td>
+		<td>Go to the search result page of CIK/Ticker 13F-HR report on SEC Search EDGAR. Then, retrieve the url of the latest document page.</td>
 	</tr>
 	<tr>
 		<td>collectxml.py</td>
-		<td>Go to the lastest document page of CIK/Ticker 13F-HR report. Then, retrieve the url of the xml file(information table of 13F-HR)</td>
+		<td>Go to the lastest document page of CIK/Ticker 13F-HR report. Then, retrieve the url of the xml file(information table of 13F-HR).</td>
 	</tr>
 	<tr>
 		<td>parsexml.py</td>
-		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file</td>
+		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file in directory "./output".</td>
 	</tr>
 </table>
 
@@ -125,7 +125,7 @@ This Python Application
 		<td>__bridge_url()</td>
 		<td>string</td>
 		<td>void</td>
-		<td>Bridge the parsed result (url) of Document Page from "collecturl.py".</td>
+		<td>Bridge the parsed result (url) of Search Result Page through "collecturl.py".</td>
 	</tr>
 	<tr>
 		<td>__collect_xml_url(url)</td>
@@ -141,7 +141,7 @@ This Python Application
 	</tr>
 	<tr>
 		<td>__implement_GET_Request(url)</td>
-		<td>string / None when failed</td>
+		<td>string / None (when failed)</td>
 		<td>url (string)</td>
 		<td>Implement HTTP GET Request of the Documentation Page and retrieve the html text.</td>
 	</tr>
@@ -156,5 +156,40 @@ This Python Application
 		<td>void</td>
 		<td>url (string)</td>
 		<td>Return the failed url of Documentation Page. This function is for debugging.</td>
+	</tr>
+</table>
+
+<b>4. parsexml.py</b>
+<table border="1">
+	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
+	<tr>
+		<td>run()</td>
+		<td>void</td>
+		<td>void</td>
+		<td>Go through the whole process, including parsing input xml and save parsed result to .tsv file</td>
+	</tr>
+	<tr>
+		<td>__bridge_xml_url()</td>
+		<td>void</td>
+		<td>url (string)</td>
+		<td>Bridge the parsed result (url of xml) of Documentation Page through "collectxml.py"</td>
+	</tr>
+	<tr>
+		<td>__implement_GET_Request(url)</td>
+		<td>string / None (when failed)</td>
+		<td>url (string)</td>
+		<td>Implement HTTP GET Request of the xml url and retrieve the xml text.</td>
+	</tr>
+	<tr>
+		<td>__parse_single_xml_to_df(src_xml)</td>
+		<td>Pandas.DataFrame</td>
+		<td>xml (string)</td>
+		<td>Parsed the input xml text to Pandas Dataframe.</td>
+	</tr>
+	<tr>
+		<td>__write_df_to_tsv()</td>
+		<td>void</td>
+		<td>void</td>
+		<td>Save the parsed dataframe to .tsv file under "./output" directory.</td>
 	</tr>
 </table>

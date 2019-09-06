@@ -192,4 +192,14 @@ This Python Application
 		<td>void</td>
 		<td>Save the parsed dataframe to .tsv file under "./output" directory.</td>
 	</tr>
+	<tr>
+		<td>print_df()</td>
+		<td>void</td>
+		<td>void</td>
+		<td>Print out parsed xml in Pandas DataFrame type. This function is for supporting and debugging.</td>
+	</tr>
 </table>
+
+## iv. Corner Cases
+<b>1. Exception and Errors</b>
+<b>2. Limitations</b>

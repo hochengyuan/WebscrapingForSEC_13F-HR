@@ -42,7 +42,7 @@ This Python Application
 	</tr>
 	<tr>
 		<td>parsexml.py</td>
-		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file in directory "./output".</td>
+		<td>Parse the information table of xml file. Then save the parsed Pandas dataframe to .tsv file in directory "./output". The parsing is based on the <a href="https://www.sec.gov/pdf/form13f.pdf">13F-HR Form of SEC</a>.</td>
 	</tr>
 </table>
 

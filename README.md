@@ -128,9 +128,33 @@ This Python Application
 		<td>Bridge the parsed result (url) of Document Page from "collecturl.py".</td>
 	</tr>
 	<tr>
-		<td>__collect_xml_url(src_html)</td>
+		<td>__collect_xml_url(url)</td>
 		<td>string</td>
-		<td>html text(string)</td>
-		<td>Retreive the xml url of 13F-HR through parsing input html of documentation page.</td>
+		<td>url (string)</td>
+		<td>Connect the url of Documentation Page and retreive the xml url of 13F-HR.</td>
+	</tr>
+	<tr>
+		<td>__select_xml_url(src_html)</td>
+		<td>string</td>
+		<td>html (string)</td>
+		<td>Parse the xml url of 13F-HR from input html.</td>
+	</tr>
+	<tr>
+		<td>__implement_GET_Request(url)</td>
+		<td>string / None when failed</td>
+		<td>url (string)</td>
+		<td>Implement HTTP GET Request of the Documentation Page and retrieve the html text.</td>
+	</tr>
+	<tr>
+		<td>get_xml_url()</td>
+		<td>void</td>
+		<td>xml_url (string)</td>
+		<td>Return the parsed url of the xml.</td>
+	</tr>
+	<tr>
+		<td>get_fail_landing_url</td>
+		<td>void</td>
+		<td>url (string)</td>
+		<td>Return the failed url of Documentation Page. This function is for debugging.</td>
 	</tr>
 </table>

@@ -48,7 +48,7 @@ This Python Application
 
 
 ## iii. Function Description for each API
-<b>1. manager.py</b>
+<br><b>1. manager.py</b>
 <table border='1'>
 	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
@@ -59,7 +59,7 @@ This Python Application
 	</tr>
 </table>
 
-<b>2. collecturl.py</b>
+<br><b>2. collecturl.py</b>
 <table border='1'>
 	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
@@ -112,7 +112,7 @@ This Python Application
 	</tr>
 </table>
 
-<b>3. collectxml.py</b>
+<br><b>3. collectxml.py</b>
 <table border="1">
 	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
@@ -159,7 +159,7 @@ This Python Application
 	</tr>
 </table>
 
-<b>4. parsexml.py</b>
+<br><b>4. parsexml.py</b>
 <table border="1">
 	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>

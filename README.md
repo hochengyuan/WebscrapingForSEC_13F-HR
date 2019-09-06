@@ -54,7 +54,7 @@ This Python Application
 	<tr>
 		<td>execute()</td>
 		<td>void</td>
-		<td>Propel the web scraping for each input CIK/Ticker</td>
+		<td>Propel the web scraping for each input CIK/Ticker.</td>
 	</tr>
 </table>
 
@@ -69,6 +69,26 @@ This Python Application
 	<tr>
 		<td>__connect()</td>
 		<td>void</td>
-		<td>If the status code for the HTTP GET Request is 200, retrieve source html text. Otherwise, terminate the application</td>
+		<td>If the status code for the HTTP GET Request is 200, retrieve source html text. Otherwise, terminate the application.</td>
+	</tr>
+	<tr>
+		<td>__implement_GET_Request()</td>
+		<td>void</td>
+		<td>Implement HTTP GET Request of the Search Result Page.</td>
+	</tr>
+	<tr>
+		<td>__generate_url()</td>
+		<td>void</td>
+		<td>Generate the url of the search result of the Search Rsult Page for the input Ticker/CIK.</td>
+	</tr>
+	<tr>
+		<td>__checkPageFound()</td>
+		<td>void</td>
+		<td>If the words "No matching Ticker Symbol" show on the search result page, terminate the whole application.</td>
+	</tr>
+	<tr>
+		<td>__collect_report_link()</td>
+		<td>void</td>
+		<td>Collect the url of documentation page. If there is no documentation page link shown on the Search Result Page, terminate the whole application.</td>
 	</tr>
 </table>

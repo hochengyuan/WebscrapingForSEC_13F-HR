@@ -1,7 +1,10 @@
 # Web Scraping for the Latest 13F-HR Report on SEC of the U.S.A. Search EDGAR
+<br> 1. Author: Chen-yuan Ho
+<br> 2. Last Update: Sep. 06, 2019 
 
 # I. Introduction
-This Python Application 
+This Python Application is for web-scraping the lastest 13F-HR Report on SEC. The application can run with batch of input CIK or tickers.
+In this project, I input the following batch of CIK as example, and save result in the folder <a href="../output" targe="_balnk">output.</a>
 
 # II. Instruction
 ## i. Enviroment

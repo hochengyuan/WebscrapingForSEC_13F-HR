@@ -91,4 +91,14 @@ This Python Application
 		<td>void</td>
 		<td>Collect the url of documentation page. If there is no documentation page link shown on the Search Result Page, terminate the whole application.</td>
 	</tr>
+	<tr>
+		<td>get_report_url()</td>
+		<td>string</td>
+		<td>Get the collected url of the lastest documentation page.</td>
+	</tr>
+	<tr>
+		<td>get_html()</td>
+		<td>string</td>
+		<td>Get the source html of the Search Result Page</td>
+	</tr>
 </table>

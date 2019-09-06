@@ -50,9 +50,10 @@ This Python Application
 ## iii. Function Description for each API
 <b>1. manager.py</b>
 <table border='1'>
-	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
+	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
 		<td>execute()</td>
+		<td>void</td>
 		<td>void</td>
 		<td>Propel the web scraping for each input CIK/Ticker.</td>
 	</tr>
@@ -60,65 +61,76 @@ This Python Application
 
 <b>2. collecturl.py</b>
 <table border='1'>
-	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
+	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
 		<td>run()</td>
+		<td>void</td>
 		<td>void</td>
 		<td>Go through all process for collecting the url of the document page.</td>
 	</tr>
 	<tr>
 		<td>__connect()</td>
 		<td>void</td>
+		<td>void</td>
 		<td>If the status code for the HTTP GET Request is 200, retrieve source html text. Otherwise, terminate the application.</td>
 	</tr>
 	<tr>
 		<td>__implement_GET_Request()</td>
+		<td>void</td>
 		<td>void</td>
 		<td>Implement HTTP GET Request of the Search Result Page.</td>
 	</tr>
 	<tr>
 		<td>__generate_url()</td>
 		<td>void</td>
+		<td>void</td>
 		<td>Generate the url of the search result of the Search Rsult Page for the input Ticker/CIK.</td>
 	</tr>
 	<tr>
 		<td>__checkPageFound()</td>
+		<td>void</td>
 		<td>void</td>
 		<td>If the words "No matching Ticker Symbol" show on the search result page, terminate the whole application.</td>
 	</tr>
 	<tr>
 		<td>__collect_report_link()</td>
 		<td>void</td>
+		<td>void</td>
 		<td>Collect the url of documentation page. If there is no documentation page link shown on the Search Result Page, terminate the whole application.</td>
 	</tr>
 	<tr>
 		<td>get_report_url()</td>
 		<td>string</td>
+		<td>void</td>
 		<td>Get the collected url of the lastest documentation page.</td>
 	</tr>
 	<tr>
 		<td>get_html()</td>
 		<td>string</td>
+		<td>void</td>
 		<td>Get the source html of the Search Result Page</td>
 	</tr>
 </table>
 
 <b>3. collectxml.py</b>
 <table border="1">
-	<tr><th>Function Name</th><th>Return Type</th><th>Description</th></tr>
+	<tr><th>Function Name</th><th>Return Type</th><th>Input Parameter</th><th>Description</th></tr>
 	<tr>
 		<td>run()</td>
+		<td>void</td>
 		<td>void</td>
 		<td>Go through all process for collecting the url of xml file for the lastest 13F-HR.</td>
 	</tr>
 	<tr>
 		<td>__bridge_url()</td>
 		<td>string</td>
+		<td>void</td>
 		<td>Bridge the parsed result (url) of Document Page from "collecturl.py".</td>
 	</tr>
 	<tr>
-		<td>__collect_xml_url()</td>
+		<td>__collect_xml_url(src_html)</td>
 		<td>string</td>
-		<td>Retreive the xml url of 13F-HR through parsing documentation page.</td>
+		<td>html text(string)</td>
+		<td>Retreive the xml url of 13F-HR through parsing input html of documentation page.</td>
 	</tr>
 </table>

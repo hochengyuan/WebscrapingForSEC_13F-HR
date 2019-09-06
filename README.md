@@ -201,5 +201,5 @@ This Python Application
 </table>
 
 ## iv. Corner Cases
-<b>1. Exception and Errors</b>
-<b>2. Limitations</b>
+<br><b>1. Exception and Errors</b>
+<br><b>2. Limitations</b>

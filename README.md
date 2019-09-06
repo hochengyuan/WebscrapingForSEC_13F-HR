@@ -4,7 +4,7 @@
 
 # I. Introduction
 This Python Application is for web-scraping the lastest 13F-HR Report on SEC. The application can run with batch of input CIK or tickers.
-In this project, I input the following batch of CIK as example, and save result in the folder <a href="../output" targe="_balnk">output.</a>
+In this project, I input the following batch of CIK as example, and save result in the folder <a href="./output" targe="_balnk">output.</a>
 
 # II. Instruction
 ## i. Enviroment

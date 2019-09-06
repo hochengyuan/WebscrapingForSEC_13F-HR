@@ -180,7 +180,7 @@ In this project, I input the following batch of CIK as example, and save result 
 		<td>Return the parsed url of the xml.</td>
 	</tr>
 	<tr>
-		<td>get_fail_landing_url</td>
+		<td>get_fail_landing_url()</td>
 		<td>void</td>
 		<td>url (string)</td>
 		<td>Return the failed url of Documentation Page. This function is for debugging.</td>

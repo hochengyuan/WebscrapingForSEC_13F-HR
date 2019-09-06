@@ -203,13 +203,41 @@ This Python Application
 
 ## iv. Corner Cases
 <br><b>1. Handle Exception and Errors</b>
-<br>(1) Wrong CIK/Ticker: 
-<br>(2) CIK/Ticker does not have 13F-HR
-<br>&nbsp;&nbsp;Form: Print out message: 
+<br> Print out message like the following and terminate the application.
+<br>(1) Wrong CIK/Ticker (Example: input "bill gate")
 ```
-ticker/CIK [input_cik] does not have 13F-HR 
+No matching CIK/Ticker: bill gate
 Application Failed
 ```
-<br>&nbsp;&nbsp;Then, terminate the application.
-<br>(3) 
+<br>(2) CIK/Ticker does not have 13F-HR Form (Example: input "goog")
+```
+ticker/CIK goog does not have 13F-HR 
+Application Failed
+```
+<br>(3) failed to implement GET Request for the url of search result in triple times
+```
+Failed: Status Code = [HTTP STATUS_CODE]
+Failed URL: [URL]
+Application Terminated
+```
+<br>(4) failed to implement GET Request for the url of the document page in triple times
+```
+Could not implement GET Request on url of document page: [URL] ; [HTTP STATUS CODE]
+Application Terminated
+```
+<br>(5) url of document page does not exist
+```
+the report page does not exist [failed url]
+Application Terminated
+```
+<br>(6) failed to implement GET Request for the url of xml in triple times
+```
+Could not implement GET Request on xml: [xml_url] ; Status Code: [HTTP STATUS_CODE]
+Application Terminated
+```
+<br>(7) url of XML does not work
+```
+the xml url does not work. url: [failed url]
+Application Terminated
+```
 <br><b>2. Limitations</b>

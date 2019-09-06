@@ -59,7 +59,7 @@ class CollectXML:
 		
 		if try_time == 3:
 			self.__fail_landing_url = url
-			print("Could not implement GET Request on xml: %s ; Status Code: %s" % \
+			print("Could not implement GET Request on url of document page: %s ; Status Code: %s" % \
 				(self.get_fail_landing_url() , response.status_code))
 			print("Application Terminated")
 			sys.exit(1)

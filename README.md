@@ -17,6 +17,8 @@ This Python Application
 <br> 4. Follow the instruction on the terminal screen
 <image src="./screenshot/command_line.png">
 <br> 5. Output Directory: "./output/"
+<br> Sample of the output for CIK: 0001166559
+<image src="./output_sample.png">
 
 # III. Documentation
 ## i. API Profile
